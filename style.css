@@ -1,0 +1,260 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+ background:linear-gradient(to right, #eef2ff, #dbeafe);
+}
+
+
+nav{
+    background:#0d6efd;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+}
+
+
+
+.hero{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-text h1{
+    font-size:55px;
+    color:#0d6efd;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:#0d6efd;
+    color:white;
+    padding:12px 30px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+
+body{
+    margin:0;
+    padding:0;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    height:100vh;
+}
+
+.form-container{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+
+
+.form-img{
+    width:90px;
+    display:block;
+    margin:0 auto 15px;
+}
+
+
+form{
+    background:white;
+    backdrop-filter:blur(10px);
+    padding:40px;
+    width:400px;
+    border-radius:20px;
+    box-shadow:0px 8px 32px rgba(0,0,0,0.3);
+}
+
+form h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:black;
+}
+
+form input,
+form select{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:2px solid black;
+    border-radius:8px;
+}
+
+form button{
+    width:100%;
+    padding:12px;
+    background:#0d6efd;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+
+
+.dashboard{
+    display:flex;
+}
+
+.sidebar{
+    width:250px;
+    height:100vh;
+    background:#0d6efd;
+    padding:20px;
+}
+
+.sidebar h2{
+    color:white;
+    margin-bottom:30px;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin:15px 0;
+    padding:10px;
+    border-radius:5px;
+}
+
+.sidebar a:hover{
+    background:white;
+    color:#0d6efd;
+}
+
+.content{
+    flex:1;
+    padding:30px;
+}
+
+.card{
+    background:#0d6efd;
+    color:white;
+    padding:20px;
+    width:250px;
+    border-radius:10px;
+    margin:20px 0;
+    font-size:22px;
+}
+
+table{
+    width:100%;
+    background:white;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table th,
+table td{
+    padding:15px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+table th{
+    background:#0d6efd;
+    color:white;
+}
+
+.edit-btn{
+    background:green;
+    color:white;
+    padding:8px 12px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.delete-btn{
+    background:red;
+    color:white;
+    padding:8px 12px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.student-card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    width:400px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.student-card p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+
+.cards{
+    display:flex;
+    gap:20px;
+}
+
+.card{
+    width:250px;
+}
+
+.hero-img{
+    width:180px;
+    margin-bottom:20px;
+}
+
+
+.flash{
+background:green;
+color:white;
+padding:12px;
+margin-bottom:15px;
+border-radius:5px;
+text-align:center;
+}
+
+footer{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:15px;
+}

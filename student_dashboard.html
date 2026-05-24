@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <div class="sidebar">
+
+        <h2>Student Panel</h2>
+
+        <a href="/student_dashboard">Dashboard</a>
+
+        <a href="/logout">Logout</a>
+
+    </div>
+
+    <div class="content">
+
+        <h1>Welcome {{ student.name }}</h1>
+
+        <div class="student-card">
+
+            <p><b>Email :</b> {{ student.email }}</p>
+
+            <p><b>Course :</b> {{ student.course }}</p>
+
+            <p><b>Marks :</b> {{ student.marks }}</p>
+
+            <p><b>Attendance :</b> {{ student.attendance }}</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

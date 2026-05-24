@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <div class="sidebar">
+         {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+
+        <h2>Admin Panel</h2>
+
+        <a href="/admin_dashboard">Dashboard</a>
+
+        <a href="/add_student">Add Student</a>
+
+        <a href="/logout">Logout</a>
+
+    </div>
+
+    <div class="content">
+
+        <h1>Welcome Admin</h1>
+
+        <div class="card">
+            Total Students <br>{{ total_students }}
+        </div>
+
+       <input type="text" id="searchInput" placeholder="Search Student">
+        <table>
+
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Marks</th>
+                <th>Attendance</th>
+                <th>Action</th>
+            </tr>
+
+            {% for student in students %}
+
+            <tr>
+
+                <td>{{ student.id }}</td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.course }}</td>
+                <td>{{ student.marks }}</td>
+                <td>{{ student.attendance }}</td>
+
+                <td>
+                    <a class="edit-btn" href="/edit_student/{{ student.id }}">Edit</a>
+                    <a class="delete-btn"
+                     onclick="return confirm('Are you sure?')"
+                     href="/delete_student/{{ student.id }}">
+                      Delete</a>
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+
+    </div>
+
+</div>
+
+       <script>
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", function() {
+
+    let value = this.value.toLowerCase();
+
+    let rows = document.querySelectorAll("table tr");
+
+    rows.forEach((row, index) => {
+
+        if(index === 0) return;
+
+        let text = row.innerText.toLowerCase();
+
+        row.style.display = text.includes(value) ? "" : "none";
+    });
+});
+</script>
+
+</body>
+</body>
+</html>
